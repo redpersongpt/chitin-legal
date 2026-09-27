@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Chitin privacy policy: photos are analyzed only to produce your identification, history stays on your device, and no accounts, tracking, or analytics SDKs are used.">
+<meta name="description" content="Chitin privacy policy: your photo is sent through our server to Google Gemini to identify it and is not stored, history stays on your phone, and there are no accounts or trackers.">
 <title>Privacy Policy — Chitin</title>
 <style>
   :root { color-scheme: dark; }
@@ -20,58 +20,76 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="updated">Chitin (net.buglens.app) · Last updated: July 2026</p>
+  <p class="updated">Chitin (net.buglens.app) · Last updated: September 27, 2026</p>
 
-  <p>Chitin identifies insects, spiders, and other arthropods from a photo you choose. This
-  page explains what happens to your data.</p>
+  <p>Chitin identifies insects, spiders and other arthropods from a photo you choose. This page
+  explains what leaves your phone, what stays on it, and what our server keeps.</p>
 
-  <h2>What is sent off your device</h2>
-  <p>Every time you identify a photo, that photo is sent to our backend, which uses Google
-  Gemini to analyze it and return a likely species, a confidence level, and a short written
-  explanation. This is the only way Chitin performs an identification — there is no offline
-  or on-device recognition mode. The photo is processed to produce your result and is not
-  retained by us afterward for any other purpose. It is not used to train any model, and it is
-  not linked to your identity — Chitin has no accounts and sends no personal identifiers with
-  the image.</p>
-
-  <h2>What stays on your device</h2>
-  <p>Your identification history, including thumbnail images, is stored only locally on your
-  device. It is never uploaded to or stored on our servers. You can delete it at any time from
-  Profile → Clear local history. Uninstalling the app removes it entirely.</p>
-
-  <h2>What we do not collect</h2>
+  <h2>The photo you scan</h2>
+  <p>When you scan a photo, Chitin shrinks it on your phone (about 900 pixels on the long side,
+  with location and other metadata removed) and sends it to our server. Our server passes it to
+  Google's Gemini API, which looks at the picture and returns the species, a confidence score and
+  a short description. Our server sends that answer back to your phone.</p>
   <ul>
-    <li>No account or sign-in, so no personal profile data.</li>
-    <li>No advertising identifier and no App Tracking Transparency prompt — Chitin does not
-      track you across apps or websites.</li>
-    <li>No location, contacts, or precise/coarse location access.</li>
+    <li>We don't save your photo on our server. It is held in memory only while your scan is
+      being answered.</li>
+    <li>We don't use your photos to train anything, and we don't sell or share them for any other
+      purpose.</li>
+    <li>Google processes the photo to produce the answer under the
+      <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a>.</li>
+    <li>The app never talks to Google directly and holds no API keys.</li>
+  </ul>
+
+  <h2>What is sent with each scan</h2>
+  <ul>
+    <li>The photo itself.</li>
+    <li>The app's language, so the answer comes back in your language.</li>
+    <li>The app version.</li>
+    <li>A random install ID created by the app. It is not tied to your name, Apple Account or
+      device, and it is used only to apply fair-use limits so one install can't flood the
+      service. Deleting the app deletes it.</li>
+  </ul>
+
+  <h2>What our server keeps</h2>
+  <p>Our web server keeps standard technical logs for security and to fix problems: the time of
+  a request, its status, how long it took, a random request ID, and the IP address it came from.
+  These logs are deleted automatically after 14 days. They never contain your photo or the
+  answer.</p>
+
+  <h2>What stays on your phone</h2>
+  <ul>
+    <li>Your scan history: the results, small thumbnails of your photos, and any notes or
+      favorites you add.</li>
+    <li>How many of your free scans you have used, and your settings.</li>
+  </ul>
+  <p>None of this is uploaded. You can delete your history in Settings, and deleting the app
+  removes all of it.</p>
+
+  <h2>What we don't collect</h2>
+  <ul>
+    <li>No account or sign-in.</li>
+    <li>No location, contacts or advertising identifier. No tracking across apps or websites,
+      so there is no tracking prompt.</li>
     <li>No third-party analytics or advertising SDKs.</li>
   </ul>
 
   <h2>Purchases</h2>
-  <p>Subscription purchases and restores are handled entirely by Apple through StoreKit. We do
-  not receive or store your payment details, and purchase records are not linked to a personal
-  profile on our side.</p>
+  <p>Subscriptions, free trials and restores are handled by Apple. We never see your payment
+  details, and your purchase is not linked to any profile on our side.</p>
 
   <h2>Permissions</h2>
-  <p>Camera and Photo Library access are requested only to obtain the photo you want
-  identified. Neither is used for any other purpose.</p>
-
-  <h2>Third-party processor</h2>
-  <p>Google Gemini, reached through our own backend server, is the only third party involved in
-  producing an identification. Chitin's iOS app never talks to Gemini directly and never holds
-  any provider API keys.</p>
+  <p>Chitin asks for the camera and photo library only to get the photo you want to identify.</p>
 
   <h2>Children</h2>
-  <p>Chitin does not knowingly collect personal information from children. The app has no
-  account system and no user-generated content shared with others.</p>
+  <p>Chitin has no accounts and no shared content, and it does not knowingly collect personal
+  information from children.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If this policy changes in a way that affects what data is collected or how it is used,
-  the "Last updated" date above will change and, where required, we will notify you in-app.</p>
+  <p>If this policy changes, the date at the top of this page changes too. If a change affects
+  what we collect, we will tell you in the app.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:redpersoncoding@gmail.com">redpersoncoding@gmail.com</a></p>
+  <p>Questions about privacy: <a href="mailto:redpersoncoding@gmail.com">redpersoncoding@gmail.com</a></p>
 </main>
 </body>
 </html>
